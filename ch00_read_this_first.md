@@ -1,95 +1,94 @@
-# Ch00. Read This First
+# 第 0 章 请先阅读
 
-## Why This Guide Was Written
+## 编写本指南的原因
 
-There are many places to learn Vim: the `vimtutor` is a great place to start and the `:help` manual has all the references you will ever need.
+有许多学习使用 Vim 的地方：`vimtutor` 是个初学的好地方，而 `:help` 手册则有你需要的所有参考资料。
 
-However, the average user needs something more than `vimtutor` and less than the `:help` manual. This guide attempts to bridge that gap by highlighting only the key features to learn the most useful parts of Vim in the least time possible.
+然而，普通用户需要的东西比 `vimtutor` 多，比 `:help` 手册少。本指尝试消除这一缺口，只强调关键功能，让用户花最少的时间学习 Vim 最有用的部分。
 
-Chances are you won't need all 100% of Vim features. You probably only need to know about 20% of them to become a powerful Vimmer. This guide will show you which Vim features you will find most useful.
+机会是你很可能不需要 Vim 所有 100% 的功能。你可能只需要了解其中的 20%，就能成为一名强大的 Vimer。本指南将告诉你哪些 Vim 功能对你最有用。
 
-This is an opinionated guide. It covers techniques that I often use when using Vim. The chapters are sequenced based on what I think would make the most logical sense for a beginner to learn Vim.
+这是一本观点鲜明的指南。它涵盖了我在使用 Vim 时经常用到的技巧。各章的顺序是根据我认为对初学者学习 Vim 最合理的顺序排列的。
 
-This guide is examples-heavy. When learning a new skill, examples are indispensable, having numerous examples will solidify these concepts more effectively.
+本指南重视实例。在学习一项新技能时，示例是必要的，大量的示例能更有效地巩固这些概念。
 
-Some of you may wonder why do you need to learn Vimscript? In my first year of using Vim, I was content with just knowing how to use Vim. Time passed and I started needing Vimscript more and more to write custom commands for my specific editing needs. As you are mastering Vim, you will sooner or later need to learn Vimscript. So why not sooner? Vimscript is a small language. You can learn its basics in just four chapters of this guide.
+有些人可能会问，为什么要学习 Vimscript？在我使用 Vim 的第一年，我只满足于知道如何使用 Vim。随着时间的推移，我开始越来越需要 Vimscript 来编写自定义命令，以满足我特定的编辑需求。在掌握 Vim 的过程中，你迟早会需要学习 Vimscript。为什么不早点呢？Vimscript 是一种小型语言。你只需在本指南的四个章节中学习其基础知识。
 
-You can go far using Vim without knowing any Vimscript, but knowing it will help you excel even farther.
+不懂 Vimscript 也能在使用 Vim 的道路上走得很远，但了解 Vimscript 会让你走得更远。
 
-This guide is written for both beginner and advanced Vimmers. It starts out with broad and simple concepts and ends with specific and advanced concepts. If you're an advanced user already, I would encourage you to read this guide from start to finish anyway, because you will learn something new!
+本指南是为初学者和高级 Vimmers 编写的。它以广泛而简单的概念开始，以具体而高级的概念结束。如果你已经是高级用户，我鼓励你从头到尾读完这本指南，因为你会学到新东西！
 
-## How to Transition to Vim From Using a Different Text Editor
+## 如何从使用其他文本编辑器过渡到 Vim
 
-Learning Vim is a satisfying experience, albeit hard. There are two main approaches to learn Vim:
+学习 Vim 是一种过瘾的体验，尽管很辛苦。学习 Vim 主要有两种方法：
 
-1. Cold turkey
-2. Gradual
+1. 冷火鸡法
+2. 循序渐进
 
-Going cold turkey means to stop using whatever editor / IDE you were using and to use Vim exclusively starting now. The downside of this method is you will have a serious productivity loss during the first week or two. If you're a full-time programmer, this method may not be feasible. That's why for most people, I believe the best way to transition to Vim is to use it gradually.
+冷火鸡法是指停止使用之前使用的任何编辑器 / IDE，从现在开始只使用 Vim。这种方法的缺点是，在最初的一两周内，你的工作效率会严重下降。如果你是一名全职程序员，这种方法可能并不可行。因此，对于大多数人来说，我认为过渡到 Vim 的最佳方法是循序渐进地使用它。
 
-To gradually use Vim, during the first two weeks, spend an hour a day using Vim as your editor while the rest of the time you can use other editors. Many modern editors come with Vim plugins. When I first started, I used VSCode's popular Vim plugin for an hour per day. I gradually increased the time with the Vim plugin until I finally used it all day. Keep in mind that these plugins can only emulate a fraction of Vim features. To experience the full power of Vim like Vimscript, Command-line (Ex) Commands, and external commands integration, you will need to use Vim itself.
+要逐步使用 Vim，在头两周，每天花一小时使用 Vim 作为编辑器，其余时间可以使用其他编辑器。许多现代编辑器都带有 Vim 插件。刚开始时，我每天使用 VSCode 流行的 Vim 插件一小时。后来，我逐渐增加了使用 Vim 插件的时间，直到最后整天都在使用它。请记住，这些插件只能模拟 Vim 功能的一小部分。要体验 Vim 的全部功能，如 Vimscript、命令行（Ex）命令和外部命令集成，你需要使用 Vim 本身。
 
-There were two pivotal moments that made me start to use Vim 100%: when I grasped that Vim has a grammar-like structure (see chapter 4) and the [fzf.vim](https://github.com/junegunn/fzf.vim) plugin (see chapter 3).
+有两个关键时刻让我开始 100% 使用 Vim：当我了解到 Vim 具有类似语法的结构时（见第 4 章），以及使用 [fzf.vim](https://github.com/junegunn/fzf.vim) 插件时（见第 3 章）。
 
-The first, when I realized Vim's grammar-like structure, was the defining moment that I finally understood what these Vim users were talking about. I didn't need to learn hundreds of unique commands. I only had to learn a small handful of commands and I could chain in a very intuitive way to do many things.
+第一次，当我意识到 Vim 类似语法的结构时，我终于明白了这些 Vim 用户在说什么。我不需要学习数以百计的独特命令。我只需学习一小部分命令，就能以非常直观的方式连锁完成许多事情。
 
-The second, the ability to quickly run a fuzzy file-search was the IDE feature that I used most. When I learned how to do that in Vim, I gained a major speed boost and never looked back ever since.
+第二次，快速运行模糊文件搜索的功能是我最常用的 IDE 功能。当我学会如何在 Vim 中进行模糊搜索时，我的速度得到了极大的提升，从此以后再也没有回头。
 
-Everyone programs differently. Upon introspection, you will find that there are one or two features from your favorite editor / IDE that you use all the time. Maybe it was fuzzy-search, jump-to-definition, or quick compilation. Whatever they may be, identify them quickly and learn how to implement those in Vim (chances are Vim can probably do them too). Your editing speed will receive a huge boost.
+每个人的编程方式都不尽相同。经过反思，你会发现你最喜欢的编辑器 / IDE 中有一两项功能是你一直在使用的。也许是模糊搜索、跳转到定义或快速编译。无论它们是什么，都要快速识别出来，并学习如何在 Vim 中实现它们（Vim 大概率也能实现它们）。你的编辑速度将得到极大的提升。
 
-Once you can edit at 50% of the original speed, it's time to go full-time Vim.
+一旦你的编辑速度能达到原来的 50%，你就可以只使用 Vim 了。
 
-## How to Read This Guide
+## 如何阅读本指南
 
-This is a practical guide. To become good in Vim you need to develop your muscle memory, not head knowledge.
+这是一本实用指南。要想熟练掌握 Vim，你需要培养肌肉记忆，而不是脑袋里的知识。
 
-You don't learn how to ride a bike by reading a guide about how to ride a bike. You need to actually ride a bike.
+你不能通过阅读关于如何骑自行车的指南来学习如何骑自行车。你需要真正地骑自行车。
 
-You need to type every command referred in this guide. Not only that, but you need to repeat them several times and try different combinations. Look up what other features the command you just learned has. The `:help` command and search engines are your best friends. Your goal is not to know everything about a command, but to be able to execute that command naturally and instinctively.
+你需要键入本指南中提到的每一个命令。不仅如此，你还需要多次重复并尝试不同的组合。查找你刚学会的命令还有哪些功能。`:help` 命令和搜索引擎是你最好的朋友。你的目标不是了解命令的一切，而是能够自然、本能地执行命令。
 
-As much as I try to fashion this guide to be linear, some concepts in this guide have to be presented out-of-order. For example in chapter 1, I mention the substitute command (`:s`), even though it won't be covered until chapter 12. To remedy this, whenever a new concept that has not been covered yet is mentioned early, I will provide a quick how-to guide without a detailed explanation. So please bear with me :).
+尽管我努力使本指南顺序化，但其中有些概念的表述必须打破顺序。例如，在第 1 章中，我提到了替代命令（`:s`），尽管它要到第 12 章才涉及。为了纠正这种情况，每当提前提到一个尚未涉及的新概念时，我都会提供一个快速操作指南，而不作详细解释。所以请大家多多包涵。 :)
 
-## More Help
+## 更多帮助
 
-Here's one extra tip to use the help manual: suppose you want to learn more about what `Ctrl-P` does in insert mode. If you merely search for `:h CTRL-P`, you will be directed to normal mode's `Ctrl-P`. This is not the `Ctrl-P` help that you're looking for. In this case, search instead for `:h i_CTRL-P`. The appended `i_` represents the insert mode. Pay attention to which mode it belongs to.
+这里有一个使用帮助手册的额外提示：假设你想了解更多 `Ctrl-P` 在插入模式下的作用。如果你只搜索 `:h CTRL-P`，你将被引导到普通模式的 `Ctrl-P`。这不是你要找的 `Ctrl-P` 帮助。在这种情况下，请搜索 `:h i_CTRL-P`。附加的 `i_` 表示插入模式。请注意它属于哪种模式。
 
-## Syntax
+## 语法
 
-Most of the command or code-related phrases are in code-case (`like this`).
+大多数命令或与代码相关的短语都使用行间代码（`like this`）。
 
-Strings are surrounded by a pair of double-quotes ("like this").
+字符串用一对双引号包围（"like this"）。
 
-Vim commands can be abbreviated. For example, `:join` can be abbreviated as `:j`. Throughout the guide, I will be mixing the shorthand and the longhand descriptions. For commands that are not frequently used in this guide, I will use the longhand version. For commands that are frequently used, I will use the shorthand version. I apologize for the inconsistencies. In general, whenever you spot a new command, always check it on `:help` to see its abbreviations.
+Vim 命令可以缩写。例如，`:join` 可以缩写为 `:j`。在整个指南中，我将混合使用缩写和完整写法。对于本指南中不常用的命令，我将使用完整写法。对于经常使用的命令，我将使用缩写。对于不一致的地方，我深表歉意。一般来说，每当你发现一条新命令时，应总是在 `:help` 中查看它的缩写。
 
 ## Vimrc
 
-At various points in the guide, I will refer to vimrc options. If you're new to Vim, a vimrc is like a config file.
+在本指南的不同部分，我会提到 vimrc 选项。如果你是 Vim 的新手，vimrc 就像是一个配置文件。
 
-Vimrc won't be covered until chapter 21. For the sake of clarity, I will show briefly here how to set it up.
+第 21 章才会涉及 Vimrc。为明确起见，我将在此简要介绍如何设置它。
 
-Suppose you need to set the number options (`set number`). If you don't have a vimrc already, create one. It is usually placed in your home directory and named `.vimrc`. Depending on your OS, the location may differ. In macOS, I have it on `~/.vimrc`. To see where you should put yours, check out `:h vimrc`.
+假设你需要设置行号（`set number`）。如果还没有 vimrc，请创建一个。它通常放在你的主目录下，并命名为 `.vimrc`。根据操作系统的不同，位置也可能不同。在 macOS 中，我将其放在 `~/.vimrc`。要查看你的位置，请查看 `:h vimrc`。
 
-Inside it, add `set number`. Save it (`:w`), then source it (`:source %`). You should now see line numbers displayed on the left side.
+在其中添加 `set number`。保存它（`:w`），然后激活它（`:source %`）。现在你应该能看到左侧显示的行号。
 
-Alternatively, if you don't want to a make permanent setting change, you can always run the `set` command inline, by running `:set number`. The downside of this approach is that this setting is temporary. When you close Vim, the option disappears.
+另外，如果不想永久更改设置，也可以通过在 Vim 中运行 `set` 命令，即运行 `:set number` 进行设置。这种方法的缺点是设置是临时的。关闭 Vim 后，该设置就会消失。
 
-Since we are learning about Vim and not Vi, a setting that you must have is the `nocompatible` option. Add `set nocompatible` in your vimrc. Many Vim-specific features are disabled when it is running on `compatible` option.
+由于我们学习的是 Vim 而不是 Vi，因此必须设置 `nocompatible`（无兼容）选项。在 vimrc 中添加 `set nocompatible`。当 Vim 在 `compatible` 选项下运行时，许多 Vim 特有的功能都会被禁用。
 
-In general, whenever a passage mentions a vimrc option, just add that option into vimrc, save it, and source it.
+一般来说，只要段落中提到 vimrc 选项，只需将该选项添加到 vimrc 中，保存并激活即可。
 
-## Future, Errors, Questions
+## 未来、错误、问题
 
-Expect more updates in the future. If you find any errors or have any questions, please feel free to reach out.
+期待今后有更多更新。如果您发现任何错误或有任何疑问，请随时联系我。
 
-I also have planned a few more upcoming chapters, so stay tuned!
+我还计划了一些后续章节，敬请期待！
 
-## I Want More Vim Tricks
+## 我想要更多 Vim 技巧
 
-To learn more about Vim, please follow [@learnvim](https://twitter.com/learnvim).
+要了解有关 Vim 的更多信息，请关注 [@learnvim](https://twitter.com/learnvim)。
 
-## Thank Yous
+## 感谢你们
 
-This guide wouldn't be possible without Bram Moleenar for creating Vim, my wife who had been very patient and supportive throughout the journey, all the [contributors](https://github.com/iggredible/Learn-Vim/graphs/contributors) of the learn-vim project, the Vim community, and many, many others that weren't mentioned.
+如果没有 Bram Moleenar 创造了 Vim，如果没有我的妻子在整个过程中给予的耐心和支持，如果没有 Learn-Vim 项目的所有 [贡献者](https://github.com/iggredible/Learn-Vim/graphs/contributors)、Vim 社区，如果没有许许多多没有提到的人，这本指南是不可能完成的。
 
-Thank you. You all help make text editing fun :)
-
+谢谢你们。是你们让文本编辑变得有趣。 :)
