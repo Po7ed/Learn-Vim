@@ -1,32 +1,36 @@
-# Learn Vim (the Smart Way)
+# 学习 Vim（聪明的方式）中文翻译版
 
-## What's This?
+## 这是什么？
 
-*Learn Vim (the Smart Way)* is a guide to learn the good parts of Vim.
+《学习 Vim（聪明的方式）》是一个学习 Vim 好的部分的指南。
 
-There are many places to learn Vim: the `vimtutor` is a great place to start and the `help` manual has all the references you will ever need. However, the average user needs something more than `vimtutor` and less than the `help` manual. This guide attempts to bridge that gap by highlighting only the key features to learn the most useful parts of Vim in the least time possible.
+有许多学习使用 Vim 的地方：`vimtutor` 是个初学的好地方，而 `:help` 手册则有你需要的所有参考资料。然而，普通用户需要的东西比 `vimtutor` 多，比 `:help` 手册少。本指尝试消除这一缺口，只强调关键功能，让用户花最少的时间学习 Vim 最有用的部分。
 
-This guide is written for both beginner and advanced Vimmers. It starts out with broad and simple concepts and ends with specific and advanced concepts. If you're an advanced user already, I would encourage you to read this guide from start to finish anyway, because you will learn something new!
+本指南是为初学者和高级 Vimmers 编写的。它以广泛而简单的概念开始，以具体而高级的概念结束。如果你已经是高级用户，我鼓励你从头到尾读完这本指南，因为你会学到新东西！
 
-## I Want More Vim Tips!
+> 本仓库存储 *Learn Vim (the Smart Way)* 的中文翻译版本。持续更新中。
 
-Follow [@learnvim](https://twitter.com/learnvim) for updates, Vim tips, etc.
+## 我想要更多 Vim 技巧！
 
-## Support This Project
+关注 [@learnvim](https://twitter.com/learnvim)，了解最新信息和 Vim 技巧等。
 
-This guide is and will always be free.
+## 支持本项目
 
-If you want to financially support this project, you can [purchase this guide on Leanpub](https://leanpub.com/learnvim).
+本指南现在和将来都是免费的。
+
+如果您想为本项目提供资金支持，可以[在 Leanpub 上购买本指南](https://leanpub.com/learnvim)。
 
 <a href="https://leanpub.com/learnvim"><img src="images/learn-vim-cover.png" width="100"></a>
 
-## Table Of Contents
+## 目录
 
-### Prologue
+> 下方英文标题的章节均为未翻译部分。
 
-- [Ch 0     - Read This First](./ch00_read_this_first.md)
+### 序言
 
-### Part 1: Learn Vim the Smart Way
+- [Ch 0     - 请先阅读](./ch00_read_this_first.md)
+
+### 第 1 部分 聪明地学习 Vim
 
 - [Ch 1     - Starting Vim](./ch01_starting_vim.md)
 - [Ch 2     - Buffers, Windows, and Tabs](./ch02_buffers_windows_tabs.md)
@@ -64,13 +68,14 @@ If you want to financially support this project, you can [purchase this guide on
 - [Ch 28 - Vimscript Functions](./ch28_vimscript_functions.md)
 - [Ch 29 - Plugin Example: Writing a Titlecase Plugin](./ch29_plugin_example_writing-a-titlecase-plugin.md)
 
-## Translations
-- [Learn-Vim 中文翻译](https://github.com/wsdjeg/Learn-Vim_zh_cn)(`zh-CN`)
-- [Learn-Vim Spanish](https://github.com/victorhck/learn-Vim-es)(`es`)
+## 原仓库
 
-## License & Copyright
-The materials here are all © 2020-2021 Igor Irianto.
+- [Learn-Vim](https://github.com/iggredible/Learn-Vim)
+
+## 许可和版权
+
+此处所有材料均为 Igor Irianto © 2020-2021 版权所有。
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" /></a><br />
 
-This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.
+本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">创作共用署名-非商业性-相同方式共享 4.0 国际</a>许可协议进行许可。
